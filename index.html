@@ -1,0 +1,1045 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Everything delivered in minutes |</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="1200pxstyle.css" media="screen and (max-width: 1200px)">
+    <link rel="stylesheet" href="800pxstyle.css" media="screen and (max-width: 800px)">
+    <link rel="icon" type="image/x-icon" href="fav.png">
+</head>
+
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="head">
+                <div class="logo">
+                    <a href=""><img src="blinkit-logo.png" alt="Blinkit" class="logoimg"></a>
+                </div>
+                <div class="delivery">
+                    <p class="time_claim">Delivery in 17 minutes</p>
+                    <p class="location">Set your location<strong>&blacktriangledown;</strong></p>
+                </div>
+                <div class="searchbar">
+                    <input type="text" placeholder='Search "item"' class="bar">
+                </div>
+                <div class="login">Login</div>
+                <div class="shop"><button class="cart" id="cart" onclick="added_items()"> My Cart</button></div>
+            </div>
+            <img src="user_logo.png" alt="" class="user_logo">
+            <div class="second_searchbar">
+                <input type="text" placeholder='Search "item"' class="second_bar">
+
+            </div>
+        </header>
+        <aside id="aside">
+            <div class="aside_head">
+                <div class="aside_cart">My Cart</div>
+                <button class="cross" onclick="display_none()">&nbsp;&#10006;
+                </button>
+            </div>
+            <div class="empty_block" id="empty">
+                <div class="aside_image">
+                    <img src="https://cdn.grofers.com/assets/ui/empty_states/emp_empty_cart.png" alt="">
+                </div>
+                <div class="empty_cart">
+                    You don't have any items in your cart
+                </div>
+                <div class="buy_text">
+                    Your favourite items are just a click away
+                </div>
+                <button onclick="display_none()">
+                    Start Shopping
+                </button>
+            </div>
+
+            <div class="cart_items">
+                <div class="cart_item" id="cart_item1">
+                    <div class="cart_item_image">
+                        <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/app/images/products/sliding_image/12872a.jpg?ts=1700652991"
+                            alt="">
+                    </div>
+                    <div class="cart_item_details">
+                        <div class="cart_item_name">Amul Gold Full Cream Fresh Milk</div>
+                        <div class="cart_item_quantity">500 ml</div>
+                        <div class="cart_item_price">&#8377;33</div>
+                    </div>
+                    <div><button class="add_to_cart" id="button1" value="33" onclick="total(1)">Add</button>
+                        <div class="item_count" id="item_count1">
+                            <button id="minus" onclick="decrease_each_item_number(1)">-</button>
+                            <button class='number' id="number1"></button>
+                            <button id="plus" onclick="total(1)">+</button>
+
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="cart_item" id="cart_item2">
+                    <div class="cart_item_image">
+                        <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/app/images/products/sliding_image/168a.jpg?ts=1689327537"
+                            alt="">
+                    </div>
+                    <div class="cart_item_details">
+                        <div class="cart_item_name">Amul Pure Milk Cheese Slices</div>
+                        <div class="cart_item_quantity">200 g</div>
+                        <div class="cart_item_price">&#8377;140</div>
+                    </div>
+                    <div><button class="add_to_cart" id="button2" value="140" onclick="total(2)">Add</button>
+                        <div class="item_count" id="item_count2">
+                            <button id="minus" onclick="decrease_each_item_number(2)">-</button>
+                            <button class='number' id="number2"></button>
+                            <button id="plus" onclick="total(2)">+</button>
+
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="cart_item" id="cart_item3">
+                    <div class="cart_item_image">
+                        <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/app/images/products/sliding_image/86446a.jpg?ts=1687948913"
+                            alt="">
+                    </div>
+                    <div class="cart_item_details">
+                        <div class="cart_item_name">Mother Dairy Classic Curd</div>
+                        <div class="cart_item_quantity">500 ml</div>
+                        <div class="cart_item_price">&#8377;34</div>
+                    </div>
+                    <div><button class="add_to_cart" id="button3" value="34" onclick="total(3)">Add</button>
+                        <div class="item_count" id="item_count3">
+                            <button id="minus" onclick="decrease_each_item_number(3)">-</button>
+                            <button class='number' id="number3"></button>
+                            <button id="plus" onclick="total(3)">+</button>
+
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="cart_item" id="cart_item4">
+                    <div class="cart_item_image">
+                        <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/app/images/products/sliding_image/487729a.jpg?ts=1700208078"
+                            alt="">
+                    </div>
+                    <div class="cart_item_details">
+                        <div class="cart_item_name">Table White White Eggs (6 pieces)</div>
+                        <div class="cart_item_quantity">6 pieces</div>
+                        <div class="cart_item_price">&#8377;57</div>
+                    </div>
+                    <div><button class="add_to_cart" id="button4" value="57" onclick="total(4)">Add</button>
+                        <div class="item_count" id="item_count4">
+                            <button id="minus" onclick="decrease_each_item_number(4)">-</button>
+                            <button class='number' id="number4"></button>
+                            <button id="plus" onclick="total(4)">+</button>
+
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="cart_item" id="cart_item5">
+                    <div class="cart_item_image">
+                        <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/app/images/products/sliding_image/23779a.jpg?ts=1690808192"
+                            alt="">
+                    </div>
+                    <div class="cart_item_details">
+                        <div class="cart_item_name">Harvest Gold - White Bread</div>
+                        <div class="cart_item_quantity">350 g</div>
+                        <div class="cart_item_price">&#8377;28</div>
+                    </div>
+                    <div><button class="add_to_cart" id="button5" value="28" onclick="total(5)">Add</button>
+                        <div class="item_count" id="item_count5">
+                            <button id="minus" onclick="decrease_each_item_number(5)">-</button>
+                            <button class='number' id="number5"></button>
+                            <button id="plus" onclick="total(5)">+</button>
+
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="cart_item" id="cart_item6">
+                    <div class="cart_item_image">
+                        <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/app/images/products/sliding_image/439697a.jpg?ts=1688471557"
+                            alt="">
+                    </div>
+                    <div class="cart_item_details">
+                        <div class="cart_item_name">Amul Gold Full Cream Fresh Milk</div>
+                        <div class="cart_item_quantity">200 g</div>
+                        <div class="cart_item_price">&#8377;28</div>
+                    </div>
+                    <div><button class="add_to_cart" id="button6" value="125" onclick="total(6)">Add</button>
+                        <div class="item_count" id="item_count6">
+                            <button id="minus" onclick="decrease_each_item_number(6)">-</button>
+                            <button class='number' id="number6"></button>
+                            <button id="plus" onclick="total(6)">+</button>
+
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="cart_item" id="cart_item7">
+                    <div class="cart_item_image">
+                        <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/app/images/products/sliding_image/496996a.jpg?ts=1690814374"
+                            alt="">
+                    </div>
+                    <div class="cart_item_details">
+                        <div class="cart_item_name">Brown Rolling Paper Cones - Stash Pro</div>
+                        <div class="cart_item_quantity">6 pieces</div>
+                        <div class="cart_item_price">&#8377;90</div>
+                    </div>
+                    <div><button class="add_to_cart" id="button7" value="90" onclick="total(7)">Add</button>
+                        <div class="item_count" id="item_count7">
+                            <button id="minus" onclick="decrease_each_item_number(7)">-</button>
+                            <button class='number' id="number7"></button>
+                            <button id="plus" onclick="total(7)">+</button>
+
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="cart_item" id="cart_item8">
+                    <div class="cart_item_image">
+                        <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/app/images/products/sliding_image/477311a.jpg?ts=1692701354"
+                            alt="">
+                    </div>
+                    <div class="cart_item_details">
+                        <div class="cart_item_name">Brown Rolling Paper (King Size) - Stash Pro</div>
+                        <div class="cart_item_quantity">32 pieces</div>
+                        <div class="cart_item_price">&#8377;50</div>
+                    </div>
+                    <div><button class="add_to_cart" id="button8" value="50" onclick="total(8)">Add</button>
+                        <div class="item_count" id="item_count8">
+                            <button id="minus" onclick="decrease_each_item_number(8)">-</button>
+                            <button class='number' id="number8"></button>
+                            <button id="plus" onclick="total(8)">+</button>
+
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="cart_item" id="cart_item9">
+                    <div class="cart_item_image">
+                        <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/app/images/products/sliding_image/496994a.jpg?ts=1698309251"
+                            alt="">
+                    </div>
+                    <div class="cart_item_details">
+                        <div class="cart_item_name">Brown Single Wide Rolling Paper</div>
+                        <div class="cart_item_quantity">1 pack</div>
+                        <div class="cart_item_price">&#8377;222</div>
+                    </div>
+                    <div><button class="add_to_cart" id="button9" value="222" onclick="total(9)">Add</button>
+                        <div class="item_count" id="item_count9">
+                            <button id="minus" onclick="decrease_each_item_number(9)">-</button>
+                            <button class='number' id="number9"></button>
+                            <button id="plus" onclick="total(9)">+</button>
+
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="cart_item" id="cart_item10">
+                    <div class="cart_item_image">
+                        <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/app/images/products/sliding_image/480937a.jpg?ts=1690813393"
+                            alt="">
+                    </div>
+                    <div class="cart_item_details">
+                        <div class="cart_item_name">White Connoisseur Slim Rolling Paper</div>
+                        <div class="cart_item_quantity">1 pack</div>
+                        <div class="cart_item_price">&#8377;124</div>
+                    </div>
+                    <div><button class="add_to_cart" id="button10" value="124" onclick="total(10)">Add</button>
+                        <div class="item_count" id="item_count10">
+                            <button id="minus" onclick="decrease_each_item_number(10)">-</button>
+                            <button class='number' id="number10"></button>
+                            <button id="plus" onclick="total(10)">+</button>
+
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="cart_item" id="cart_item11">
+                    <div class="cart_item_image">
+                        <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/app/images/products/sliding_image/480942a.jpg?ts=1690808898"
+                            alt="">
+                    </div>
+                    <div class="cart_item_details">
+                        <div class="cart_item_name">Brown Single Wide Rolling Paper - Raw</div>
+                        <div class="cart_item_quantity">50 pieces</div>
+                        <div class="cart_item_price">&#8377;100</div>
+                    </div>
+                    <div><button class="add_to_cart" id="button11" value="100" onclick="total(11)">Add</button>
+                        <div class="item_count" id="item_count11">
+                            <button id="minus" onclick="decrease_each_item_number(11)">-</button>
+                            <button class='number' id="number11"></button>
+                            <button id="plus" onclick="total(11)">+</button>
+
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="cart_item" id="cart_item12">
+                    <div class="cart_item_image">
+                        <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/app/images/products/sliding_image/480945a.jpg?ts=1690814962"
+                            alt="">
+                    </div>
+                    <div class="cart_item_details">
+                        <div class="cart_item_name">Slim Rolling Paper Cotton candy flavoured</div>
+                        <div class="cart_item_quantity">32 pieces</div>
+                        <div class="cart_item_price">&#8377;92</div>
+                    </div>
+                    <div><button class="add_to_cart" id="button12" value="92" onclick="total(12)">Add</button>
+                        <div class="item_count" id="item_count12">
+                            <button id="minus" onclick="decrease_each_item_number(12)">-</button>
+                            <button class='number' id="number12"></button>
+                            <button id="plus" onclick="total(12)">+</button>
+
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="cart_item" id="cart_item13">
+                    <div class="cart_item_image">
+                        <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/app/images/products/sliding_image/495577a.jpg?ts=1699953665"
+                            alt="">
+                    </div>
+                    <div class="cart_item_details">
+                        <div class="cart_item_name">Haldiram's Meetha Bhi Namkeen Bhi Gift Pack</div>
+                        <div class="cart_item_quantity">600 g</div>
+                        <div class="cart_item_price">&#8377;135</div>
+                    </div>
+                    <div><button class="add_to_cart" id="button13" value="135" onclick="total(13)">Add</button>
+                        <div class="item_count" id="item_count13">
+                            <button id="minus" onclick="decrease_each_item_number(13)">-</button>
+                            <button class='number' id="number13"></button>
+                            <button id="plus" onclick="total(13)">+</button>
+
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="cart_item" id="cart_item14">
+                    <div class="cart_item_image">
+                        <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/app/images/products/sliding_image/15558a.jpg?ts=1690814371"
+                            alt="">
+                    </div>
+                    <div class="cart_item_details">
+                        <div class="cart_item_name">Lijjat Moong Papad</div>
+                        <div class="cart_item_quantity">200 g</div>
+                        <div class="cart_item_price">&#8377;77</div>
+                    </div>
+                    <div><button class="add_to_cart" id="button14" value="77" onclick="total(14)">Add</button>
+                        <div class="item_count" id="item_count14">
+                            <button id="minus" onclick="decrease_each_item_number(14)">-</button>
+                            <button class='number' id="number14"></button>
+                            <button id="plus" onclick="total(14)">+</button>
+
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="cart_item" id="cart_item15">
+                    <div class="cart_item_image">
+                        <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/app/images/products/sliding_image/623a.jpg?ts=1689327547"
+                            alt="">
+                    </div>
+                    <div class="cart_item_details">
+                        <div class="cart_item_name">Haldiram's Plain Bhujia</div>
+                        <div class="cart_item_quantity">200 g</div>
+                        <div class="cart_item_price">&#8377;55</div>
+                    </div>
+                    <div><button class="add_to_cart" id="button15" value="55" onclick="total(15)">Add</button>
+                        <div class="item_count" id="item_count15">
+                            <button id="minus" onclick="decrease_each_item_number(15)">-</button>
+                            <button class='number' id="number15"></button>
+                            <button id="plus" onclick="total(15)">+</button>
+
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="cart_item" id="cart_item16">
+                    <div class="cart_item_image">
+                        <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/app/images/products/sliding_image/605a.jpg?ts=1689327547"
+                            alt="">
+                    </div>
+                    <div class="cart_item_details">
+                        <div class="cart_item_name">Haldiram's Classic Salted Peanut Namkeen</div>
+                        <div class="cart_item_quantity">200 g</div>
+                        <div class="cart_item_price">&#8377;54</div>
+                    </div>
+                    <div><button class="add_to_cart" id="button16" value="54" onclick="total(16)">Add</button>
+                        <div class="item_count" id="item_count16">
+                            <button id="minus" onclick="decrease_each_item_number(16)">-</button>
+                            <button class='number' id="number16"></button>
+                            <button id="plus" onclick="total(16)">+</button>
+
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="cart_item" id="cart_item17">
+                    <div class="cart_item_image">
+                        <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/app/images/products/sliding_image/19251a.jpg?ts=1687948393"
+                            alt="">
+                    </div>
+                    <div class="cart_item_details">
+                        <div class="cart_item_name">Haldiram's Lite Mixture Namkeen</div>
+                        <div class="cart_item_quantity">150 g</div>
+                        <div class="cart_item_price">&#8377;35</div>
+                    </div>
+                    <div><button class="add_to_cart" id="button17" value="35" onclick="total(17)">Add</button>
+                        <div class="item_count" id="item_count17">
+                            <button id="minus" onclick="decrease_each_item_number(17)">-</button>
+                            <button class='number' id="number17"></button>
+                            <button id="plus" onclick="total(17)">+</button>
+
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="cart_item" id="cart_item18">
+                    <div class="cart_item_image">
+                        <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/app/images/products/sliding_image/240092a.jpg?ts=1687324818"
+                            alt="">
+                    </div>
+                    <div class="cart_item_details">
+                        <div class="cart_item_name">Lay's India's Magic Masala Chips</div>
+                        <div class="cart_item_quantity">40 g</div>
+                        <div class="cart_item_price">&#8377;20</div>
+                    </div>
+                    <div><button class="add_to_cart" id="button18" value="20" onclick="total(18)">Add</button>
+                        <div class="item_count" id="item_count18">
+                            <button id="minus" onclick="decrease_each_item_number(18)">-</button>
+                            <button class='number' id="number18"></button>
+                            <button id="plus" onclick="total(18)">+</button>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div id="bill_details">
+                <div class="bill_head"><h4>Bill Details</h4></div>
+                <div class="item_total"><div><img src="receipt.png" alt="">Item total</div><div id="price"></div></div>
+                <div class="delivery_charges"><div><img src="motorbike.png" alt="">Delivery charges</div><div id="del_charge"></div></div>
+                <div class="grand"><div>Grand Total</div> <div id="grand_total"></div></div>
+            </div>
+
+            <div id="cancelation">
+                <h4>Cancellation Policy</h4>
+                <p>Orders cannot be cancelled once packed for delivery. In case of unexpected delays, a refund will be provided, if applicable.</p>
+            </div>
+            
+        </aside>
+        <main>
+            <div>
+                <img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=2700/layout-engine/2022-05/Group-33704.jpg"
+                    alt="" class="banner">
+            </div>
+            <div class="ads">
+                <div class="ad"><img
+                        src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=720/layout-engine/2023-12/Webbanner-Blinkit-1.jpg"
+                        alt="" class="ad_image"></div>
+                <div class="ad"><img
+                        src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=720/layout-engine/2023-07/pharmacy-WEB.jpg"
+                        alt="" class="ad_image"></div>
+                <div class="ad"><img
+                        src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=720/layout-engine/2023-07/print_crystal_WEB_0.jpg"
+                        alt="" class="ad_image"></div>
+                <div class="ad"><img
+                        src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=720/layout-engine/2023-07/Pet-Care_WEB.jpg"
+                        alt="" class="ad_image"></div>
+            </div>
+            <div class="cat">
+                <div class="row_cat">
+                    <img class="cat_item"
+                        src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/layout-engine/2022-12/paan-corner_web.png"
+                        alt="">
+                    <img class="cat_item"
+                        src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/layout-engine/2022-11/Slice-2_10.png"
+                        alt="">
+                    <img class="cat_item"
+                        src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/layout-engine/2022-11/Slice-3_9.png"
+                        alt="">
+                    <img class="cat_item"
+                        src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/layout-engine/2022-11/Slice-4_9.png"
+                        alt="">
+                    <img class="cat_item"
+                        src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/layout-engine/2022-11/Slice-5_4.png"
+                        alt="">
+                    <img class="cat_item"
+                        src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/layout-engine/2022-11/Slice-6_5.png"
+                        alt="">
+                    <img class="cat_item"
+                        src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/layout-engine/2022-11/Slice-7_3.png"
+                        alt="">
+                    <img class="cat_item"
+                        src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/layout-engine/2022-11/Slice-8_4.png"
+                        alt="">
+                    <img class="cat_item"
+                        src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/layout-engine/2022-11/Slice-9_3.png"
+                        alt="">
+                    <img class="cat_item"
+                        src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/layout-engine/2022-11/Slice-10.png"
+                        alt="">
+
+                </div>
+                <div class="row_cat">
+                    <img class="cat_item"
+                        src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/layout-engine/2022-11/Slice-11.png"
+                        alt="">
+                    <img class="cat_item"
+                        src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/layout-engine/2022-11/Slice-12.png"
+                        alt="">
+                    <img class="cat_item"
+                        src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/layout-engine/2022-11/Slice-13.png"
+                        alt="">
+                    <img class="cat_item"
+                        src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/layout-engine/2022-11/Slice-14.png"
+                        alt="">
+                    <img class="cat_item"
+                        src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/layout-engine/2022-11/Slice-15.png"
+                        alt="">
+                    <img class="cat_item"
+                        src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/layout-engine/2022-11/Slice-16.png"
+                        alt="">
+                    <img class="cat_item"
+                        src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/layout-engine/2022-11/Slice-17.png"
+                        alt="">
+                    <img class="cat_item"
+                        src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/layout-engine/2022-11/Slice-18.png"
+                        alt="">
+                    <img class="cat_item"
+                        src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/layout-engine/2022-11/Slice-19.png"
+                        alt="">
+                    <img class="cat_item"
+                        src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/layout-engine/2022-11/Slice-20.png"
+                        alt="">
+
+                </div>
+            </div>
+            <div class="category">
+                <div class="category_name">
+                    <div class="name">Dairy, Bread & Eggs</div>
+                    <div class="see_all">see all</div>
+                </div>
+                <div class="category_items">
+                    <div class="item">
+                        <div><img class="item_image"
+                                src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/app/images/products/sliding_image/12872a.jpg?ts=1700652991"
+                                alt=""></div>
+                        <div class="item_detail">
+                            <div class="item_name">Amul Gold Full Cream Fresh Milk</div>
+                            <div class="item_quantity">500 ml</div>
+                            <div class="add">
+                                <div class="price">&#8377;33</div>
+                                <div><button class="add_to_cart" id="button1" value="33" onclick="total(1)">Add</button>
+                                    <div class="item_count" id="item_count1">
+                                        <button id="minus" onclick="decrease_each_item_number(1)">-</button>
+                                        <button class='number' id="number1"></button>
+                                        <button id="plus" onclick="total(1)">+</button>
+
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div><img class="item_image"
+                                src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/app/images/products/sliding_image/168a.jpg?ts=1689327537"
+                                alt=""></div>
+                        <div class="item_detail">
+                            <div class="item_name">Amul Pure Milk Cheese Slices</div>
+                            <div class="item_quantity">200 g</div>
+                            <div class="add">
+                                <div class="price">&#8377;140</div>
+                                <div><button class="add_to_cart" id="button2" value="140"
+                                        onclick="total(2)">Add</button></div>
+                                <div class="item_count" id="item_count2">
+                                    <button id="minus" onclick="decrease_each_item_number(2)">-</button>
+                                    <button class='number' id="number2"></button>
+                                    <button id="plus" onclick="total(2)">+</button>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div><img class="item_image"
+                                src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/app/images/products/sliding_image/86446a.jpg?ts=1687948913"
+                                alt=""></div>
+                        <div class="item_detail">
+                            <div class="item_name">Mother Dairy Classic Curd</div>
+                            <div class="item_quantity">500 ml</div>
+                            <div class="add">
+                                <div class="price">&#8377;34</div>
+                                <div><button class="add_to_cart" id="button3" value="34" onclick="total(3)">Add</button>
+                                </div>
+                                <div class="item_count" id="item_count3">
+                                    <button id="minus" onclick="decrease_each_item_number(3)">-</button>
+                                    <button class='number' id="number3"></button>
+                                    <button id="plus" onclick="total(3)">+</button>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div><img class="item_image"
+                                src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/app/images/products/sliding_image/487729a.jpg?ts=1700208078"
+                                alt=""></div>
+                        <div class="item_detail">
+                            <div class="item_name">Table White White Eggs (6 pieces)</div>
+                            <div class="item_quantity">6 pieces</div>
+                            <div class="add">
+                                <div class="price">&#8377;57</div>
+                                <div><button class="add_to_cart" id="button4" value="57" onclick="total(4)">Add</button>
+                                </div>
+                                <div class="item_count" id="item_count4">
+                                    <button id="minus" onclick="decrease_each_item_number(4)">-</button>
+                                    <button class='number' id="number4"></button>
+                                    <button id="plus" onclick="total(4)">+</button>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div><img class="item_image"
+                                src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/app/images/products/sliding_image/23779a.jpg?ts=1690808192"
+                                alt=""></div>
+                        <div class="item_detail">
+                            <div class="item_name">Harvest Gold - White Bread</div>
+                            <div class="item_quantity">350 g</div>
+                            <div class="add">
+                                <div class="price">&#8377;28</div>
+                                <div><button class="add_to_cart" id="button5" value="28" onclick="total(5)">Add</button>
+                                </div>
+                                <div class="item_count" id="item_count5">
+                                    <button id="minus" onclick="decrease_each_item_number(5)">-</button>
+                                    <button class='number' id="number5"></button>
+                                    <button id="plus" onclick="total(5)">+</button>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div><img class="item_image"
+                                src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/app/images/products/sliding_image/439697a.jpg?ts=1688471557"
+                                alt=""></div>
+                        <div class="item_detail">
+                            <div class="item_name">Amul Gold Full Cream Fresh Milk</div>
+                            <div class="item_quantity">200 g</div>
+                            <div class="add">
+                                <div class="price">&#8377;125</div>
+                                <div><button class="add_to_cart" id="button6" value="125"
+                                        onclick="total(6)">Add</button></div>
+                                <div class="item_count" id="item_count6">
+                                    <button id="minus" onclick="decrease_each_item_number(6)">-</button>
+                                    <button class='number' id="number6"></button>
+                                    <button id="plus" onclick="total(6)">+</button>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="category">
+                <div class="category_name">
+                    <div class="name">Rolling paper & tobacco</div>
+                    <div class="see_all">see all</div>
+                </div>
+                <div class="category_items">
+                    <div class="item">
+                        <div><img class="item_image"
+                                src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/app/images/products/sliding_image/496996a.jpg?ts=1690814374"
+                                alt=""></div>
+                        <div class="item_detail">
+                            <div class="item_name">Brown Rolling Paper Cones - Stash Pro</div>
+                            <div class="item_quantity">6 pieces</div>
+                            <div class="add">
+                                <div class="price">&#8377;90</div>
+                                <div><button class="add_to_cart" id="button7" value="90" onclick="total(7)">Add</button>
+                                </div>
+                                <div class="item_count" id="item_count7">
+                                    <button id="minus" onclick="decrease_each_item_number(7)">-</button>
+                                    <button class='number' id="number7"></button>
+                                    <button id="plus" onclick="total(7)">+</button>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div><img class="item_image"
+                                src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/app/images/products/sliding_image/477311a.jpg?ts=1692701354"
+                                alt=""></div>
+                        <div class="item_detail">
+                            <div class="item_name">Brown Rolling Paper (King Size) - Stash Pro</div>
+                            <div class="item_quantity">32 pieces</div>
+                            <div class="add">
+                                <div class="price">&#8377;50</div>
+                                <div><button class="add_to_cart" id="button8" value="50" onclick="total(8)">Add</button>
+                                </div>
+                                <div class="item_count" id="item_count8">
+                                    <button id="minus" onclick="decrease_each_item_number(8)">-</button>
+                                    <button class='number' id="number8"></button>
+                                    <button id="plus" onclick="total(8)">+</button>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div><img class="item_image"
+                                src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/app/images/products/sliding_image/496994a.jpg?ts=1698309251"
+                                alt=""></div>
+                        <div class="item_detail">
+                            <div class="item_name">Brown Single Wide Rolling Paper</div>
+                            <div class="item_quantity">1 pack</div>
+                            <div class="add">
+                                <div class="price">&#8377;222</div>
+                                <div><button class="add_to_cart" id="button9" value="222"
+                                        onclick="total(9)">Add</button></div>
+                                <div class="item_count" id="item_count9">
+                                    <button id="minus" onclick="decrease_each_item_number(9)">-</button>
+                                    <button class='number' id="number9"></button>
+                                    <button id="plus" onclick="total(9)">+</button>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div><img class="item_image"
+                                src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/app/images/products/sliding_image/480937a.jpg?ts=1690813393"
+                                alt=""></div>
+                        <div class="item_detail">
+                            <div class="item_name">White Connoisseur Slim Rolling Paper</div>
+                            <div class="item_quantity">1 pack</div>
+                            <div class="add">
+                                <div class="price">&#8377;124</div>
+                                <div><button class="add_to_cart" id="button10" value="124"
+                                        onclick="total(10)">Add</button></div>
+                                <div class="item_count" id="item_count10">
+                                    <button id="minus" onclick="decrease_each_item_number(10)">-</button>
+                                    <button class='number' id="number10"></button>
+                                    <button id="plus" onclick="total(10)">+</button>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div><img class="item_image"
+                                src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/app/images/products/sliding_image/480942a.jpg?ts=1690808898"
+                                alt=""></div>
+                        <div class="item_detail">
+                            <div class="item_name">Brown Single Wide Rolling Paper - Raw</div>
+                            <div class="item_quantity">50 pieces</div>
+                            <div class="add">
+                                <div class="price">&#8377;100</div>
+                                <div><button class="add_to_cart" id="button11" value="100"
+                                        onclick="total(11)">Add</button></div>
+                                <div class="item_count" id="item_count11">
+                                    <button id="minus" onclick="decrease_each_item_number(11)">-</button>
+                                    <button class='number' id="number11"></button>
+                                    <button id="plus" onclick="total(11)">+</button>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div><img class="item_image"
+                                src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/app/images/products/sliding_image/480945a.jpg?ts=1690814962"
+                                alt=""></div>
+                        <div class="item_detail">
+                            <div class="item_name">Slim Rolling Paper Cotton candy flavoured</div>
+                            <div class="item_quantity">32 pieces</div>
+                            <div class="add">
+                                <div class="price">&#8377;92</div>
+                                <div><button class="add_to_cart" id="button12" value="92"
+                                        onclick="total(12)">Add</button></div>
+                                <div class="item_count" id="item_count12">
+                                    <button id="minus" onclick="decrease_each_item_number(12)">-</button>
+                                    <button class='number' id="number12"></button>
+                                    <button id="plus" onclick="total(12)">+</button>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="category">
+                <div class="category_name">
+                    <div class="name">Snacks & Munchies</div>
+                    <div class="see_all">see all</div>
+                </div>
+                <div class="category_items">
+                    <div class="item">
+                        <div><img class="item_image"
+                                src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/app/images/products/sliding_image/495577a.jpg?ts=1699953665"
+                                alt=""></div>
+                        <div class="item_detail">
+                            <div class="item_name">Haldiram's Meetha Bhi Namkeen Bhi Gift Pack</div>
+                            <div class="item_quantity">600 g</div>
+                            <div class="add">
+                                <div class="price">&#8377;135</div>
+                                <div><button class="add_to_cart" id="button13" value="135"
+                                        onclick="total(13)">Add</button></div>
+                                <div class="item_count" id="item_count13">
+                                    <button id="minus" onclick="decrease_each_item_number(13)">-</button>
+                                    <button class='number' id="number13"></button>
+                                    <button id="plus" onclick="total(13)">+</button>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div><img class="item_image"
+                                src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/app/images/products/sliding_image/15558a.jpg?ts=1690814371"
+                                alt=""></div>
+                        <div class="item_detail">
+                            <div class="item_name">Lijjat Moong Papad</div>
+                            <div class="item_quantity">200 g</div>
+                            <div class="add">
+                                <div class="price">&#8377;77</div>
+                                <div><button class="add_to_cart" id="button14" value="77"
+                                        onclick="total(14)">Add</button></div>
+                                <div class="item_count" id="item_count14">
+                                    <button id="minus" onclick="decrease_each_item_number(14)">-</button>
+                                    <button class='number' id="number14"></button>
+                                    <button id="plus" onclick="total(14)">+</button>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div><img class="item_image"
+                                src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/app/images/products/sliding_image/623a.jpg?ts=1689327547"
+                                alt=""></div>
+                        <div class="item_detail">
+                            <div class="item_name">Haldiram's Plain Bhujia</div>
+                            <div class="item_quantity">200 g</div>
+                            <div class="add">
+                                <div class="price">&#8377;55</div>
+                                <div><button class="add_to_cart" id="button15" value="55"
+                                        onclick="total(15)">Add</button></div>
+                                <div class="item_count" id="item_count15">
+                                    <button id="minus" onclick="decrease_each_item_number(15)">-</button>
+                                    <button class='number' id="number15"></button>
+                                    <button id="plus" onclick="total(15)">+</button>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div><img class="item_image"
+                                src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/app/images/products/sliding_image/605a.jpg?ts=1689327547"
+                                alt=""></div>
+                        <div class="item_detail">
+                            <div class="item_name">Haldiram's Classic Salted Peanut Namkeen</div>
+                            <div class="item_quantity">200 g</div>
+                            <div class="add">
+                                <div class="price">&#8377;54</div>
+                                <div><button class="add_to_cart" id="button16" value="54"
+                                        onclick="total(16)">Add</button></div>
+                                <div class="item_count" id="item_count16">
+                                    <button id="minus" onclick="decrease_each_item_number(16)">-</button>
+                                    <button class='number' id="number16"></button>
+                                    <button id="plus" onclick="total(16)">+</button>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div><img class="item_image"
+                                src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/app/images/products/sliding_image/19251a.jpg?ts=1687948393"
+                                alt=""></div>
+                        <div class="item_detail">
+                            <div class="item_name">Haldiram's Lite Mixture Namkeen</div>
+                            <div class="item_quantity">150 g</div>
+                            <div class="add">
+                                <div class="price">&#8377;35</div>
+                                <div><button class="add_to_cart" id="button17" value="35"
+                                        onclick="total(17)">Add</button></div>
+                                <div class="item_count" id="item_count17">
+                                    <button id="minus" onclick="decrease_each_item_number(17)">-</button>
+                                    <button class='number' id="number17"></button>
+                                    <button id="plus" onclick="total(17)">+</button>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div><img class="item_image"
+                                src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/app/images/products/sliding_image/240092a.jpg?ts=1687324818"
+                                alt=""></div>
+                        <div class="item_detail">
+                            <div class="item_name">Lay's India's Magic Masala Chips</div>
+                            <div class="item_quantity">40 g</div>
+                            <div class="add">
+                                <div class="price">&#8377;20</div>
+                                <div><button class="add_to_cart" id="button18" value="20"
+                                        onclick="total(18)">Add</button></div>
+                                <div class="item_count" id="item_count18">
+                                    <button id="minus" onclick="decrease_each_item_number(18)">-</button>
+                                    <button class='number' id="number18"></button>
+                                    <button id="plus" onclick="total(18)">+</button>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <article>
+            <div class="art">
+                <div class="links">
+                    <h3 class="article_heading">Useful Links</h3>
+                    <div class="rows">
+                        <div class="row">
+                            <ul>
+                                <li>About</li>
+                                <li>Career</li>
+                                <li>Blog</li>
+                                <li>Press</li>
+                                <li>Lead</li>
+                                <li>Value</li>
+                            </ul>
+                        </div>
+                        <div class="row">
+                            <ul>
+                                <li>Privacy</li>
+                                <li>Terms</li>
+                                <li>FAQs</li>
+                                <li>Security</li>
+                                <li>Mobile</li>
+                                <li>Contact</li>
+                            </ul>
+                        </div>
+                        <div class="row">
+                            <ul>
+                                <li>Partner</li>
+                                <li>Express</li>
+                                <li>Seller</li>
+                                <li>Spotlight</li>
+                                <li>Warehouse</li>
+                                <li>Delliver</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="categories_list">
+                    <h3 class="article_heading">Categories <span class="see_all">&nbsp;&nbsp;see all</span></h3>
+                    <div class="rows">
+                        <div class="row">
+                            <ul>
+                                <li>Vegetables & Fruits</li>
+                                <li>Cold Drinks & Juices</li>
+                                <li>Bakery & Biscuits</li>
+                                <li>Dry Fruits, Masala & Oil</li>
+                                <li>Paan Corner</li>
+                                <li>Pharma & Wellness</li>
+                                <li>Personal Care</li>
+                                <li>Beauty & Cosmetics</li>
+                                <li>Toys & Games</li>
+                            </ul>
+                        </div>
+                        <div class="row">
+                            <ul>
+                                <li>Dairy & Breakfast</li>
+                                <li>Instant & Frozen Food</li>
+                                <li>Sweet Tooth</li>
+                                <li>Sauces & Spreads</li>
+                                <li>Organic & Premium</li>
+                                <li>Cleaning Essentials</li>
+                                <li>Ice Creams & Frozen Desserts</li>
+                                <li>Magazines</li>
+                                <li>Print Store</li>
+                            </ul>
+                        </div>
+                        <div class="row">
+                            <ul>
+                                <li>Munchies</li>
+                                <li>Tea, Coffee & Health Drinks</li>
+                                <li>Atta, Rice & Dal</li>
+                                <li>Chicken, Meat & Fish</li>
+                                <li>Baby Care</li>
+                                <li>Home & Office</li>
+                                <li>Pet Care</li>
+                                <li>Books</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </article>
+        <footer>
+            <div class="top_footer">
+                <div class="copyright">
+                    © Blink Commerce Private Limited (formerly known as Grofers India Private Limited), 2016-2023
+                </div>
+                <div class="download">
+                    <p>Download App</p>
+                    <img src="https://blinkit.com/d61019073b700ca49d22.png" alt="" class="downloadapp">
+                    <img src="https://blinkit.com/8ed033800ea38f24c4f0.png" alt="" class="downloadapp">
+                </div>
+                <div class="socials">
+                    <div class="social">&nbsp;</div>
+                    <div class="social">&nbsp;</div>
+                    <div class="social">&nbsp;</div>
+                    <div class="social">&nbsp;</div>
+                    <div class="social">&nbsp;</div>
+                </div>
+            </div>
+            <div class="bottom_footer">
+                “Blinkit” is owned & managed by "Blink Commerce Private Limited" (formerly known as Grofers India
+                Private Limited) and is not related, linked or interconnected in whatsoever manner or nature, to
+                “GROFFR.COM” which is a real estate services business operated by “Redstone Consultancy Services Private
+                Limited”.
+            </div>
+        </footer>
+    </div>
+
+    <div class="style_phone_cart" id="phone_cart">
+        <div id="cart2"></div>
+        <button class="view_cart" onclick="added_items()">View Cart &#9658;</button>
+    </div>
+</body>
+
+<script src="script.js">
+
+</script>
+
+</html>

@@ -1,0 +1,84 @@
+/* header */
+
+.searchbar{
+    min-width: 300px;
+}
+
+.logoimg{
+    height: 3rem;
+    margin: 0.8rem 1rem;
+}
+
+.time_claim{
+    font-size: 1.1rem;
+}
+
+.location{
+    font-size: 0.8rem;
+}
+
+.login{
+    font-size: 1.2rem;
+    margin: 0.8rem 2rem;
+}
+
+.cart{
+    height: 40px;
+    width: 100px;
+    margin: 0.8rem 2rem;
+}
+
+/* main */
+
+main{
+    width: 95%;
+}
+
+.ads{
+    flex-wrap: wrap;
+}
+
+.ad{
+    width: 50%;
+    padding: 4px 0px;
+}
+
+.row_cat{
+    flex-wrap: wrap;
+}
+
+.cat_item{
+    width: 20%;
+}
+
+.item{
+    width: 120px;
+    margin: 18px 3px;
+}
+
+.item_name{
+    font-size: 0.7rem;
+}
+/* article */
+
+.categories_list .rows{
+    display: none;
+}
+
+.row{
+    font-size: 0.8rem;
+    margin-right: 70px;
+}
+
+/* footer */
+footer{
+    width: 95%;
+}
+
+.copyright{
+    font-size: 0.6rem;
+}
+
+.bottom_footer{
+    font-size: 0.7rem;
+}
