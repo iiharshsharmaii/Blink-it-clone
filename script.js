@@ -1,5 +1,6 @@
 var total_value = 0;
 var total_items = 0;
+var x = false;
 if (window.innerWidth > 800) {
     var tally = document.getElementById('cart');
 }
@@ -11,7 +12,7 @@ var numbers = {
     number1: 0, number2: 0, number3: 0, number4: 0, number5: 0, number6: 0, number7: 0, number8: 0, number9: 0, number10: 0, number11: 0,
     number12: 0, number13: 0, number14: 0, number15: 0, number16: 0, number17: 0, number18: 0
 }
-
+ 
 
 
 function total(div_num) {
@@ -22,7 +23,10 @@ function total(div_num) {
 
     else {
         if (window.innerWidth < 801) {
-            document.getElementById('phone_cart').style.display = 'flex';
+            if(x == false){
+                document.getElementById('phone_cart').style.display = 'flex';
+
+            }
         }
         var button_value = parseFloat(document.getElementById("button" + div_num).value);
         total_value += button_value;
@@ -110,6 +114,7 @@ function display_none() {
     if( total_items > 0 && window.innerWidth < 801){
         document.getElementById('phone_cart').style.display = 'flex';
     }
+    return x = false;
 }
 
 function added_items() {
@@ -120,5 +125,5 @@ function added_items() {
     if (total_items > 0) {
         document.getElementById('empty').style.display = 'none';
     }
-    
+    return x = true;
 }
